@@ -2,3 +2,43 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/04_user_guide/04_data_catalog.html
+test:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/fraudTest.csv
+
+train:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/fraudTrain.csv
+
+removed_prefix_train:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/fraudTrain.csv
+
+removed_prefix_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/fraudTest.csv
+
+removed_col_train:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/col_fraudTrain.csv
+
+removed_col_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/col_fraudTest.csv
+
+le_train:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/le_fraudTrain.csv
+
+le_test:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/le_fraudTest.csv
+
+classifier:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/classifier.pickle
+  versioned: true
+
+encoders:
+  type: pickle.PickleDataSet
+  filepath: data/04_feature/encoders.pickle
